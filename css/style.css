@@ -8,9 +8,11 @@
     transition: 0.3s;
 }
 .hero{
-    width: 100%;
     position: absolute;
     z-index: -1;
+}
+.hero{
+    width: 100%;
 }
 .hero-container{
     height: 57em;
