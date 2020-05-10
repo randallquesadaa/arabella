@@ -8,7 +8,7 @@
                         <img class="img-fluid p-0" src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
                     </div>
                 <?php endif; ?>
-                <div class="hero-container container d-flex align-items-center">
+                <div class="hero-container container d-flex justify-content-lg-start align-items-center justify-content-center">
                     <div>
                         <h3 class="text-white text-center">WHAT'S NEW</h3>
                         <div class="mt-5 text-center">
@@ -17,6 +17,9 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="mt-5">
             
         </section>
 

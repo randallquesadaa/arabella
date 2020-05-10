@@ -1,0 +1,55 @@
+@import "media-queries";
+@font-face{
+    font-family: "Futura";
+    src: url(./fonts/FutuLt.ttf);
+}
+
+body{
+    font-family: FuturaLt;
+}
+
+.fab{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.fab:hover{
+    color: black;
+    transition: 0.3s;
+}
+.hero{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.hero img{
+    width: 100%;
+}
+.hero-container{
+    height: 57em;
+    h3{
+        font-size: 4em;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        border: 1px solid #FFFFFF;
+        font-size: 20px;
+        transition: 0.6s;
+    }
+    a:hover{
+        transition: 0.6s;
+        background: rgb(155, 155, 155);
+        border: 1px solid #FFFFFF;
+    }
+    @include respond-to($phone){
+        height: 12.4em;
+        h3{
+            font-size: 3em;
+        }
+        a{
+            padding: 15px 20px 15px 20px;
+        }
+    }
+}
+

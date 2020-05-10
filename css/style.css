@@ -1,36 +1,66 @@
-.fab{
-    font-size: 30px;
-    color: white;
-    text-decoration: none;
+@font-face {
+  font-family: "Futura";
+  src: url(/fonts/FutuLt.ttf?19580604133dfd68ae370ddc889aedab);
 }
-.fab:hover{
-    color: black;
-    transition: 0.3s;
-}
-.hero{
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-}
-.hero img{
-    width: 100%;
-}
-.hero-container{
-    height: 57em;
-}
-.hero-container h3{
 
-    font-size: 4em;
+body {
+  font-family: FuturaLt;
 }
-.hero-container a{
-    text-decoration: none;
-    color: white;
-    border: 1px solid #FFFFFF;
-    font-size: 20px;
-    transition: 0.6s;
+
+.fab {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
 }
-.hero-container a:hover{
-    transition: 0.6s;
-    background: rgb(155, 155, 155);
-    border: 1px solid #FFFFFF;
+
+.fab:hover {
+  color: black;
+  transition: 0.3s;
 }
+
+.hero {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.hero-container {
+  height: 57em;
+}
+
+.hero-container h3 {
+  font-size: 4em;
+}
+
+.hero-container a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid #FFFFFF;
+  font-size: 20px;
+  transition: 0.6s;
+}
+
+.hero-container a:hover {
+  transition: 0.6s;
+  background: #9b9b9b;
+  border: 1px solid #FFFFFF;
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-container {
+    height: 12.4em;
+  }
+
+  .hero-container h3 {
+    font-size: 3em;
+  }
+
+  .hero-container a {
+    padding: 15px 20px 15px 20px;
+  }
+}
+
