@@ -19,7 +19,7 @@
             </div>
         </section>
 
-        <section class="container-fluid mt-5 d-flex justify-content-center">
+        <section class="categories container-fluid d-flex justify-content-center">
                 <?php get_template_part('includes/section','content');?>
 
             
@@ -27,7 +27,7 @@
         </section>
 
         <section id="newProduct" class="newProduct container">
-            <h1 class=" text-center my-5">New Products</h1>
+            <h1 class=" text-center mt-3 mb-3">New Products</h1>
             <?php get_template_part('includes/section','newproducts');?>
         </section>
     </div>

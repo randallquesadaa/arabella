@@ -77,57 +77,63 @@ html {
   }
 }
 
-.woocommerce {
-  text-align: center;
-  width: 100%;
+.categories {
+  background: #e0e0e038;
 }
 
-.woocommerce ul {
+.categories .woocommerce {
+  text-align: center;
+  width: 100%;
+  margin: 3em 0 3em 0;
+}
+
+.categories .woocommerce ul {
   list-style: none;
   padding: 0;
 }
 
-.woocommerce ul li {
+.categories .woocommerce ul li {
   float: left;
   margin: 0 5px 0 5px;
   width: 32%;
 }
 
 @media only screen and (max-width: 480px) {
-  .woocommerce ul li {
+  .categories .woocommerce ul li {
     width: 29.8%;
   }
 }
 
-.woocommerce ul li a {
+.categories .woocommerce ul li a {
   display: block;
   text-decoration: none;
   color: black;
 }
 
-.woocommerce ul li a img {
+.categories .woocommerce ul li a img {
   width: 100%;
   height: 30em;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 480px) {
-  .woocommerce ul li a img {
-    height: 7em;
+  .categories .woocommerce ul li a img {
+    height: 6em;
   }
 }
 
-.woocommerce ul li a mark {
+.categories .woocommerce ul li a mark {
   display: none;
 }
 
-.woocommerce ul li a h2 {
+.categories .woocommerce ul li a h2 {
   font-family: "Futura";
 }
 
 @media only screen and (max-width: 480px) {
-  .woocommerce ul li a h2 {
+  .categories .woocommerce ul li a h2 {
     font-size: 1em;
   }
 }
