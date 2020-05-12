@@ -10,6 +10,17 @@ function load_css()
     wp_enqueue_style('style');
 
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    
+    wp_dequeue_style( 'selectWoo' );
+    wp_dequeue_style( 'woocommerce_frontend_styles' );
+    wp_dequeue_style( 'woocommerce-general');
+    wp_dequeue_style( 'woocommerce-layout' );
+    wp_dequeue_style( 'woocommerce-smallscreen' );
+    wp_dequeue_style( 'woocommerce_fancybox_styles' );
+    wp_dequeue_style( 'woocommerce_chosen_styles' );
+    wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
+    wp_dequeue_style( 'woocommerce-inline' );
+    wp_dequeue_style( 'select2' );
 
 }
 
@@ -23,6 +34,7 @@ function load_js()
     wp_enqueue_script('bootstrap');
     wp_register_script('scroll', get_template_directory_uri() . '/js/smooth-scroll.min.js', 'jquery', false, true);
     wp_enqueue_script('scroll');
+    
 }
 
 add_action('wp_enqueue_scripts', 'load_js');
