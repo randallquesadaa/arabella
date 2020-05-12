@@ -89,7 +89,11 @@ html
                 color: black;
                 img{
                     width: 100%;
-                    height: auto;
+                    height: 30em;
+                    object-fit: cover;
+                    @include respond-to($phone){
+                        height: 7em;
+                    }
                 }
                 mark{
                     display: none;
@@ -111,8 +115,9 @@ html
     a{
         img{
             max-width: 100%;
-            height: auto;
+            height: 100%;
             padding: 10px;
+            object-fit: cover;
         }
     }
 }
