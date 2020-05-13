@@ -22,6 +22,22 @@ html {
   scroll-behavior: smooth;
 }
 
+footer p {
+  font-family: "Kiona";
+}
+
+footer i {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer i:hover {
+  color: #111111;
+  transition: 0.3s;
+}
+
 .hero {
   width: 100%;
   z-index: -1;
@@ -150,19 +166,82 @@ html {
      object-fit: cover;
 }
 
-footer p {
-  font-family: "Kiona";
+.hero {
+  width: 100%;
+  z-index: -1;
+  position: relative;
 }
 
-footer i {
-  font-size: 30px;
+.hero img {
+  width: 100%;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero-contact {
+  font-family: "Pala";
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  text-decoration: none;
-  transition: 0.3s;
 }
 
-footer i:hover {
-  color: #111111;
-  transition: 0.3s;
+.hero-contact h3 {
+  font-size: 4em;
+  width: 36%;
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-contact h3 {
+    font-size: 3em;
+    width: 100%;
+  }
+}
+
+.aboutUs {
+  background-color: #292929;
+}
+
+.aboutUs h2 {
+  font-family: "Pala";
+  font-size: 40px;
+}
+
+.aboutUs p {
+  font-family: "Futura";
+  font-size: 20px;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact a p {
+  font-size: 30px;
+  color: black;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact a p {
+    display: none;
+  }
+}
+
+.contact a i {
+  font-size: 45px;
+  color: black;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact a i {
+    font-size: 40px;
+  }
+}
+
+.contact a i:hover {
+  color: black;
 }
 
