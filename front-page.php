@@ -21,9 +21,6 @@
 
         <section class="categories container-fluid d-flex justify-content-center">
                 <?php get_template_part('includes/section','content');?>
-
-            
-
         </section>
 
         <section id="newProduct" class="newProduct container">

@@ -48,7 +48,7 @@ footer{
     position: relative;
     img{
         width: 100%;
-        height: 80vh;
+        height: 70vh;
         object-fit: cover;
     }
 }
@@ -56,7 +56,7 @@ footer{
     font-family: "Pala";
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 41%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -148,18 +148,6 @@ footer{
 
 //----------Contact----------
 
-//HERO_CONTACT
-.hero{
-    width: 100%;
-    z-index: -1;
-    
-    position: relative;
-    img{
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-    }
-}
 .hero-contact{
     font-family: "Pala";
     text-align: center;
@@ -216,3 +204,47 @@ footer{
     
 }
 
+//----------Product----------
+
+//Fondo de la parte del producto
+.product_section{
+    background-color: #f8f9fa;
+    margin-top: 3rem;
+}
+.wp-post-image{
+    max-width: 100%;
+    height: auto;
+    margin: 0px !important;
+}
+.woocommerce-breadcrumb{
+    display: none !important;
+}
+.woocommerce-product-gallery__image{
+    background-color: transparent;
+    float: left;
+}
+//Boton de añadir al carrito Arabella
+.add_to_cart{
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    width: 155px;
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+}
+.add_to_cart:hover{
+    background-color: #fff;
+    color: #000;
+    height: 40px;
+    width: 155px;
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+}
+//Imagenes pequeñas de productos
+.woocommerce-product-gallery__image{
+    a{
+        img{
+            margin: 20px 10px;
+        }
+    }
+}
