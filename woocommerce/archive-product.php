@@ -44,6 +44,11 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+
+<div class="col-lg-3">
+	<?php get_template_part('includes/section','categories');?>
+</div>
+
 <?php
 if ( woocommerce_product_loop() ) {
 
@@ -54,8 +59,6 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
-	do_action( 'woocommerce_before_shop_loop' );
-
 	woocommerce_product_loop_start();
 
 	if ( wc_get_loop_prop( 'total' ) ) {
