@@ -288,7 +288,7 @@ footer i:hover {
 
 @media only screen and (max-width: 480px) {
   .woocommerce-cart-form table #coupon_code {
-    width: 53%;
+    width: 52%;
     height: 35px;
     margin-right: 5px;
   }
@@ -300,7 +300,7 @@ footer i:hover {
 
 .woocommerce-cart-form table .remove:hover {
   background-color: #ebe9eb;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #515151;
 }
 
