@@ -248,3 +248,61 @@ footer{
         }
     }
 }
+
+//----------Cart----------
+.woocommerce-cart-form{
+    table{
+        img{
+            width: 30%;
+            
+        }
+        #coupon_code{
+            width: auto;
+            text-align: center;
+            border-radius: 5px;
+            height: 35px;
+            border: 1px solid rgba(0,0,0,.1);
+            @include respond-to($phone){
+                width: 53%;
+                height: 35px;
+                margin-right: 5px;
+            }
+        }
+        .remove{
+            color: black !important;
+        }
+        .remove:hover{
+            background-color: #ebe9eb;
+            border-radius: 5px;
+            color: #515151;
+        }
+    }
+}
+
+.woocommerce a.button.alt{
+    @include respond-to($phone){
+        display: block;
+    }
+}
+
+.woocommerce a.button.alt{
+    background-color: black;
+    text-align: center;
+}
+
+.woocommerce table.cart td.actions .coupon .input-text+.button{
+    @include respond-to($phone){
+        font-size: 14px;
+        width: auto;
+        height: 35px;
+    }
+}
+
+.cart-discount{
+    a{
+        float: right;
+        @include respond-to($phone){
+            float: none;
+        }
+    }
+}

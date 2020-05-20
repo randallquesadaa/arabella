@@ -11,7 +11,7 @@ function load_css()
 
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
     
-    wp_dequeue_style( 'selectWoo' );
+    /*wp_dequeue_style( 'selectWoo' );
     wp_dequeue_style( 'woocommerce_frontend_styles' );
     wp_dequeue_style( 'woocommerce-general');
     wp_dequeue_style( 'woocommerce-layout' );
@@ -20,7 +20,7 @@ function load_css()
     wp_dequeue_style( 'woocommerce_chosen_styles' );
     wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
     wp_dequeue_style( 'woocommerce-inline' );
-    wp_dequeue_style( 'select2' );
+    wp_dequeue_style( 'select2' );*/
 
 }
 

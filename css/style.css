@@ -274,3 +274,62 @@ footer i:hover {
   margin: 20px 10px;
 }
 
+.woocommerce-cart-form table img {
+  width: 30%;
+}
+
+.woocommerce-cart-form table #coupon_code {
+  width: auto;
+  text-align: center;
+  border-radius: 5px;
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce-cart-form table #coupon_code {
+    width: 53%;
+    height: 35px;
+    margin-right: 5px;
+  }
+}
+
+.woocommerce-cart-form table .remove {
+  color: black !important;
+}
+
+.woocommerce-cart-form table .remove:hover {
+  background-color: #ebe9eb;
+  border-radius: 5px;
+  color: #515151;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce a.button.alt {
+    display: block;
+  }
+}
+
+.woocommerce a.button.alt {
+  background-color: black;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce table.cart td.actions .coupon .input-text + .button {
+    font-size: 14px;
+    width: auto;
+    height: 35px;
+  }
+}
+
+.cart-discount a {
+  float: right;
+}
+
+@media only screen and (max-width: 480px) {
+  .cart-discount a {
+    float: none;
+  }
+}
+
