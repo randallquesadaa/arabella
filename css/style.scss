@@ -242,9 +242,127 @@ footer{
 }
 //Imagenes pequeñas de productos
 .woocommerce-product-gallery__image{
-    a{
-        img{
-            margin: 20px 10px;
+        a{
+            img{
+                margin: 20px 10px;
+                @include respond-to($phone){
+                    margin: 10px 20px;
+            }
         }
     }
+}
+//Card de productos recomendados
+/*  */
+.card_image{
+    img{
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        padding: 7px;
+    }
+}
+// img {
+//   width: 100%;
+//   vertical-align: middle;
+//   padding: 7px;
+// }
+.precio {
+  position: absolute;
+  color: #ffffff;
+  padding: 7px;
+  background-color: #000000;
+  border: 1px solid rgb(255, 255, 255);
+  margin-left: 0.5rem;
+  font-size: 120%;
+}
+
+.card_btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: rgb(0, 0, 0);
+}
+
+.card_btn:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(88, 88, 88);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 66rem) {
+  .cards_item {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .precio {
+    margin-left: 215px;
+  }
+  .cards_item {
+    padding: 0%;
+    padding-bottom: 1rem;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(59, 59, 59, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 2rem;
+  background: #ffffff;
+  border: 2px solid rgb(0, 0, 0);
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.card_title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+.made_by {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
 }

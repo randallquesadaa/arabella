@@ -1,55 +1,37 @@
 @font-face {
   font-family: "Futura";
-  src: url(/fonts/FutuLt.ttf?19580604133dfd68ae370ddc889aedab);
-}
-
+  src: url(./fonts/FutuLt.ttf); }
 @font-face {
   font-family: "Pala";
-  src: url(/fonts/pala.ttf?96261bb90c9babbf8042ce7f43200d65);
-}
-
+  src: url(./fonts/pala.ttf); }
 @font-face {
   font-family: "Kiona";
-  src: url(/fonts/Kiona-Regular.ttf?3ba508d4210940c399f65688b1125916);
-}
-
+  src: url(./fonts/Kiona-Regular.ttf); }
 @font-face {
   font-family: "Kiona-Italic";
-  src: url(/fonts/Kiona-Itallic.ttf?0bbf0d54a64e245c604ee3bbef9c819e);
-}
-
+  src: url(./fonts/Kiona-Itallic.ttf); }
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 footer p {
-  font-family: "Kiona";
-}
-
+  font-family: "Kiona"; }
 footer i {
   font-size: 30px;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
-}
-
+  transition: 0.3s; }
 footer i:hover {
   color: #111111;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .hero {
   width: 100%;
   z-index: -1;
-  position: relative;
-}
-
-.hero img {
-  width: 100%;
-  height: 70vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+  position: relative; }
+  .hero img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover; }
 
 .hero-container {
   font-family: "Pala";
@@ -58,113 +40,70 @@ footer i:hover {
   top: 41%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-container h3 {
-  font-size: 4em;
-}
-
-.hero-container a {
-  text-decoration: none;
-  color: white;
-  border: 1px solid #FFFFFF;
-  font-size: 20px;
-  transition: 0.6s;
-}
-
-.hero-container a:hover {
-  transition: 0.6s;
-  background: #9b9b9b;
-  border: 1px solid #FFFFFF;
-}
-
-@media only screen and (max-width: 480px) {
-  .hero-container {
-    height: 9.6em;
-  }
-
+  color: white; }
   .hero-container h3 {
-    font-size: 2em;
-  }
-
+    font-size: 4em; }
   .hero-container a {
-    padding: 10px 15px 10px 15px;
-  }
-}
+    text-decoration: none;
+    color: white;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+    transition: 0.6s; }
+  .hero-container a:hover {
+    transition: 0.6s;
+    background: #9b9b9b;
+    border: 1px solid #FFFFFF; }
+  @media only screen and (max-width: 480px) {
+    .hero-container {
+      height: 9.6em; }
+      .hero-container h3 {
+        font-size: 2em; }
+      .hero-container a {
+        padding: 10px 15px 10px 15px; } }
 
 .categories {
-  background: #e0e0e038;
-}
-
-.categories .woocommerce {
-  text-align: center;
-  width: 100%;
-  margin: 3em 0 3em 0;
-}
-
-.categories .woocommerce ul {
-  list-style: none;
-  padding: 0;
-}
-
-.categories .woocommerce ul li {
-  float: left;
-  margin: 0 5px 0 5px;
-  width: 32%;
-}
-
-@media only screen and (max-width: 480px) {
-  .categories .woocommerce ul li {
-    width: 29.8%;
-  }
-}
-
-.categories .woocommerce ul li a {
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-
-.categories .woocommerce ul li a img {
-  width: 100%;
-  height: 30em;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 480px) {
-  .categories .woocommerce ul li a img {
-    height: 6em;
-  }
-}
-
-.categories .woocommerce ul li a mark {
-  display: none;
-}
-
-.categories .woocommerce ul li a h2 {
-  font-family: "Futura";
-}
-
-@media only screen and (max-width: 480px) {
-  .categories .woocommerce ul li a h2 {
-    font-size: 1em;
-  }
-}
+  background: #e0e0e038; }
+  .categories .woocommerce {
+    text-align: center;
+    width: 100%;
+    margin: 3em 0 3em 0; }
+    .categories .woocommerce ul {
+      list-style: none;
+      padding: 0; }
+      .categories .woocommerce ul li {
+        float: left;
+        margin: 0 5px 0 5px;
+        width: 32%; }
+        @media only screen and (max-width: 480px) {
+          .categories .woocommerce ul li {
+            width: 29.8%; } }
+        .categories .woocommerce ul li a {
+          display: block;
+          text-decoration: none;
+          color: black; }
+          .categories .woocommerce ul li a img {
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+            margin-bottom: 10px; }
+            @media only screen and (max-width: 480px) {
+              .categories .woocommerce ul li a img {
+                height: 6em; } }
+          .categories .woocommerce ul li a mark {
+            display: none; }
+          .categories .woocommerce ul li a h2 {
+            font-family: "Futura"; }
+            @media only screen and (max-width: 480px) {
+              .categories .woocommerce ul li a h2 {
+                font-size: 1em; } }
 
 .newProduct {
-  font-family: "Pala";
-}
-
-.newProduct a img {
-  max-width: 100%;
-  height: 100%;
-  padding: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+  font-family: "Pala"; }
+  .newProduct a img {
+    max-width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: cover; }
 
 .hero-contact {
   font-family: "Pala";
@@ -173,84 +112,56 @@ footer i:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-contact h3 {
-  font-size: 4em;
-  width: 36%;
-}
-
-@media only screen and (max-width: 480px) {
+  color: white; }
   .hero-contact h3 {
-    font-size: 3em;
-    width: 100%;
-  }
-}
+    font-size: 4em;
+    width: 36%; }
+    @media only screen and (max-width: 480px) {
+      .hero-contact h3 {
+        font-size: 3em;
+        width: 100%; } }
 
 .aboutUs {
-  background-color: #292929;
-}
-
-.aboutUs h2 {
-  font-family: "Pala";
-  font-size: 40px;
-}
-
-.aboutUs p {
-  font-family: "Futura";
-  font-size: 20px;
-}
+  background-color: #292929; }
+  .aboutUs h2 {
+    font-family: "Pala";
+    font-size: 40px; }
+  .aboutUs p {
+    font-family: "Futura";
+    font-size: 20px; }
 
 .contact a {
-  text-decoration: none;
-}
-
-.contact a p {
-  font-size: 30px;
-  color: black;
-}
-
-@media only screen and (max-width: 480px) {
+  text-decoration: none; }
   .contact a p {
-    display: none;
-  }
-}
-
-.contact a i {
-  font-size: 45px;
-  color: black;
-}
-
-@media only screen and (max-width: 480px) {
+    font-size: 30px;
+    color: black; }
+    @media only screen and (max-width: 480px) {
+      .contact a p {
+        display: none; } }
   .contact a i {
-    font-size: 40px;
-  }
-}
-
-.contact a i:hover {
-  color: black;
-}
+    font-size: 45px;
+    color: black; }
+    @media only screen and (max-width: 480px) {
+      .contact a i {
+        font-size: 40px; } }
+  .contact a i:hover {
+    color: black; }
 
 .product_section {
   background-color: #f8f9fa;
-  margin-top: 3rem;
-}
+  margin-top: 3rem; }
 
 .wp-post-image {
   max-width: 100%;
   height: auto;
-  margin: 0px !important;
-}
+  margin: 0px !important; }
 
 .woocommerce-breadcrumb {
-  display: none !important;
-}
+  display: none !important; }
 
 .woocommerce-product-gallery__image {
   background-color: transparent;
-  float: left;
-}
+  float: left; }
 
 .add_to_cart {
   background-color: #000;
@@ -258,8 +169,7 @@ footer i:hover {
   height: 40px;
   width: 155px;
   border-radius: 6px;
-  transition: all 0.5s ease-in-out;
-}
+  transition: all 0.5s ease-in-out; }
 
 .add_to_cart:hover {
   background-color: #fff;
@@ -267,10 +177,102 @@ footer i:hover {
   height: 40px;
   width: 155px;
   border-radius: 6px;
-  transition: all 0.5s ease-in-out;
-}
+  transition: all 0.5s ease-in-out; }
 
 .woocommerce-product-gallery__image a img {
-  margin: 20px 10px;
-}
+  margin: 20px 10px; }
+  @media only screen and (max-width: 480px) {
+    .woocommerce-product-gallery__image a img {
+      margin: 10px 20px; } }
 
+/*  */
+.card_image img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  padding: 7px; }
+
+.precio {
+  position: absolute;
+  color: #ffffff;
+  padding: 7px;
+  background-color: #000000;
+  border: 1px solid white;
+  margin-left: 0.5rem;
+  font-size: 120%; }
+
+.card_btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: black; }
+
+.card_btn:hover {
+  color: white;
+  background: #585858; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.cards_item {
+  display: flex;
+  padding: 1rem; }
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%; } }
+@media (min-width: 66rem) {
+  .cards_item {
+    width: 30%; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .precio {
+    margin-left: 215px; }
+
+  .cards_item {
+    padding: 0%;
+    padding-bottom: 1rem; } }
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(59, 59, 59, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+
+.card_content {
+  padding: 2rem;
+  background: #ffffff;
+  border: 2px solid black;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 7px; }
+
+.card_title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0px; }
+
+.card_text {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400; }
+
+.made_by {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

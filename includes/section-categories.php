@@ -20,7 +20,7 @@
     'title_li'     => $title,
     'hide_empty'   => $empty
 );
-  if($link == '/wordpress/shop/'){
+  if($link == '/wordpress/shop/' || $link == '/wordpress/tienda/'){
     
     $all_categories = get_categories( $args );
     

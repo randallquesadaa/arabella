@@ -25,7 +25,7 @@ if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 global $product;
 global $post;
 
-$columns           = apply_filters( 'woocommerce_product_thumbnails_columns row bg-light my-5 justify-content-center', 12 );
+$columns           = apply_filters( 'woocommerce_product_thumbnails_columns row bg-light my-5 justify-content-center', 6 );
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters(
 	'woocommerce_single_product_image_gallery_classes',
@@ -41,11 +41,13 @@ $wrapper_classes   = apply_filters(
  */
 $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 ?>
-<div class="col-lg-12 d-flex flex-row product_section">
-    <div class="col-lg-6 <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>"
-        data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-        <figure class="woocommerce-product-gallery__wrapper col-12">
-            <?php
+<div class="col-lg-12 d-flex flex-lg-row product_section align-content-center">
+    <div class="row">
+        <div class="col-lg-6 col-12 d-flex  <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>"
+            data-columns="<?php echo esc_attr( $columns ); ?>"
+            style="opacity: 0; transition: opacity .25s ease-in-out;">
+            <figure class="woocommerce-product-gallery__wrapper col-12">
+                <?php
 			if ( $product->get_image_id() ) {
                 $html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 			} else {
@@ -57,91 +59,100 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
            
             do_action( 'woocommerce_product_thumbnails' );
 			?>
-        </figure>
-    </div>
-    <div class="col-lg-6">
-        <div class="row">
-            <!--Tittle-->
-            <div class="col-12 mt-5">
-                <?php the_title( '<h2 class="product_title entry-title">', '</h2>' ); ?>
-            </div>
-            <!--Description-->
-            <div class="col-12 mt-3 mb-3">
-                <p><?php the_content();?>
-                </p>
-            </div>
-            <!--Line-->
-            <div class="col-12 my-2">
-                <hr>
-            </div>
-            <!--Precio-->
-            <div class="col-12  align-items-center justify-content-center">
-                <div class="row">
-                    <div class="col-6">
-                        <h5 class="text-left">Price</h4>
-                    </div>
-                    <div class="col-6">
-                        <p
-                            class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>">
-                            <?php echo $product->get_price_html(); ?></p>
+            </figure>
+        </div>
+        <div class="col-lg-6 col-12">
+            <div class="row">
+                <!--Tittle-->
+                <div class="col-12 mt-lg-5">
+                    <?php the_title( '<h2 class="product_title entry-title">', '</h2>' ); ?>
+                </div>
+                <!--Description-->
+                <div class="col-12 mt-lg-3 mt-1 mb-3">
+                    <p><?php the_content();?>
+                    </p>
+                </div>
+                <!--Line-->
+                <div class="col-12 my-2">
+                    <hr>
+                </div>
+                <!--Precio-->
+                <div class="col-12  align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="text-left">Price</h4>
+                        </div>
+                        <div class="col-6">
+                            <p
+                                class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>">
+                                <?php echo $product->get_price_html(); ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--Line-->
-            <div class="col-12 my-2">
-                <hr>
-            </div>
-            <!--Color-->
-            <div class="col-12  align-items-center justify-content-center">
-                <div class="row">
-                    <div class="col-6">
-                        <h5 class="text-left">Color</h4>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" class="btn rounded-circle btn-primary btn-xs float-right mr-2">W</button>
-                        <button type="button" class="btn rounded-circle btn-danger btn-xs float-right mr-2"> R</button>
+                <!--Line-->
+                <div class="col-12 my-2">
+                    <hr>
+                </div>
+                <!--Color-->
+                <div class="col-12  align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                            <h5 class="text-lg-left text-center">Color</h4>
+                        </div>
+                        <div class="col-12 col-lg-8 d-flex justify-content-around">
+                            <?php
+                        $color = array();
+                        array_push($color = get_field( 'color' ));
+                        $count_color= count($color);
+                        // Create a comma-separated list from selected values.
+                        for($i = 0; $i < $count_color; $i++): ?>
+                            <button type="button" class="btn border border-dark btn-xs mb-2"><?php echo $color[$i]?></button>
+                            <?php endfor; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--Linea-->
-            <div class="col-12 my-2">
-                <hr>
-            </div>
+                <!--Linea-->
+                <div class="col-12 my-2">
+                    <hr>
+                </div>
 
-            <!--SIZE-->
-            <div class="col-12 align-items-center justify-content-center">
-                <div class="row">
-                    <div class="col-12">
-                        <h5 class="text-center mt-5 mb-4">SIZE</h4>
-                    </div>
-                    <div class="col-12 text-center mb-3">
-                        <button type="button" class="btn border border-dark btn-xs mr-2">XS</button>
-                        <button type="button" class="btn border border-dark btn-xs mr-2">S</button>
-                        <button type="button" class="btn border border-dark btn-xs mr-2">L</button>
-                        <button type="button" class="btn border border-dark btn-xs mr-2">XL</button>
-                    </div>
-                </div>
-            </div>
-            <!--Add to cart-->
-            <div class="col-12 align-items-center justify-content-center my-3">
-                <div class="row">
-                    <div class="col-12 text-center ">
-                        <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"
-                            class="single_add_to_cart_button button alt add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-                    </div>
-                </div>
-            </div>
+                <!--SIZE-->
+                <div class="col-12 align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="text-center mt-1 mt-lg-5 mb-4">Available sizes</h4>
+                        </div>
+                        <div class="col-12 text-center mb-3">
+                            <?php
+                        $sizes = array();
+                        array_push($sizes = get_field( 'sizes' ));
+                        $count_sizes= count($sizes);
+                        // Create a comma-separated list from selected values.
+                        for($i = 0; $i < $count_sizes; $i++): ?>
+                            <button type="button"
+                                class="btn border border-dark btn-xs mr-2"><?php echo $sizes[$i]?></button>
+                            <?php endfor; ?>
 
+
+                        </div>
+                    </div>
+                </div>
+                <!--Add to cart-->
+                <div class="col-12 align-items-center justify-content-center my-3">
+                    <div class="row">
+                        <div class="col-12 text-center ">
+                            <button type="submit" name="add-to-cart"
+                                value="<?php echo esc_attr( $product->get_id() ); ?>"
+                                class="single_add_to_cart_button button alt add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-12 mt-4 mb-4 text-center">
-            <h2>
-                RECOMMENDS
-            </h2>
-        </div>
     </div>
     <!-- <div class="row">
         <div class="card-deck mt-3">
