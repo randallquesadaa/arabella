@@ -313,6 +313,12 @@ footer i:hover {
 .woocommerce a.button.alt {
   background-color: black;
   text-align: center;
+  transition: 0.2s;
+}
+
+.woocommerce a.button.alt:hover {
+  background-color: #3a3a3a;
+  transition: 0.2s;
 }
 
 @media only screen and (max-width: 480px) {

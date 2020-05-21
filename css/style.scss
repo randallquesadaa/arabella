@@ -288,6 +288,11 @@ footer{
 .woocommerce a.button.alt{
     background-color: black;
     text-align: center;
+    transition: 0.2s;
+}
+.woocommerce a.button.alt:hover{
+    background-color: rgb(58, 58, 58);
+    transition: 0.2s;
 }
 
 .woocommerce table.cart td.actions .coupon .input-text+.button{
