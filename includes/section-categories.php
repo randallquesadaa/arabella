@@ -63,8 +63,8 @@
             $sub_cats = get_categories( $args2 );
             if($sub_cats) {
                 foreach($sub_cats as $sub_category) {
-                    echo '<br /><a id="'.$sub_category->term_id.'" href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a>';
-                }   
+                    echo '<a class="text-warning" id="'.$sub_category->term_id.'" href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a>';
+                }   //Categoria
             }
         }
     }  
