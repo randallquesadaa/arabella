@@ -10,7 +10,10 @@ function load_css()
     wp_enqueue_style('style');
 
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+<<<<<<< HEAD
 
+=======
+>>>>>>> Randall
 }
 
 add_action ('wp_enqueue_scripts','load_css');
@@ -53,3 +56,18 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+
+
+
+
+function change_woocommerce_field_markup( $field, $key, $args, $value ) {
+    //  Remove the .form-row class from the current field wrapper
+    $field = str_replace('form-row', '', $field);
+
+    //  Wrap the field (and its wrapper) in a new custom div, adding .form-row so the reshuffling works as expected, and adding the field priority
+    $field = '<div class="form-check form-row single-field-wrapper" data-priority="' . $args['priority'] . '">' . $field . '</div>';
+
+    return $field;
+}
+add_filter( 'woocommerce_form_field', 'change_woocommerce_field_markup', 10, 4 );

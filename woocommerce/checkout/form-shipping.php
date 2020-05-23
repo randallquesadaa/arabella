@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="shipping_address">
 
-			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
+		<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
 
 			<div class="woocommerce-shipping-fields__field-wrapper">
 				<?php
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php endif; ?>
 
-		<div class="woocommerce-additional-fields__field-wrapper">
+		<div class="woocommerce-additional-fields__field-wrapper form-group">
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 			<?php endforeach; ?>
