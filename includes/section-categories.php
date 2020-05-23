@@ -20,7 +20,7 @@
     'title_li'     => $title,
     'hide_empty'   => $empty
 );
-  if($link == '/shop/'){
+  if($link == '/arabella/tienda/'){
     
     $all_categories = get_categories( $args );
     
@@ -48,7 +48,7 @@
         } 
         $longitud = count($array_id);
         for($i=0; $i<$longitud; $i++){
-        if($link == '/product-category/'.$array_name[$i].'/'){
+        if($link == '/arabella/product-category/'.$array_name[$i].'/'){
             $args2 = array(
             'taxonomy'     => $taxonomy,
             'child_of'     => 0,
@@ -67,5 +67,7 @@
                 }   
             }
         }
-    }  
+    }
+
+    
 ?>

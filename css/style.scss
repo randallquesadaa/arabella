@@ -263,7 +263,7 @@ footer{
             height: 35px;
             border: 1px solid rgba(0,0,0,.1);
             @include respond-to($phone){
-                width: 52%;
+                width: 53%;
                 height: 35px;
                 margin-right: 5px;
             }
@@ -273,7 +273,7 @@ footer{
         }
         .remove:hover{
             background-color: #ebe9eb;
-            border-radius: 3px;
+            border-radius: 5px;
             color: #515151;
         }
     }
@@ -288,11 +288,6 @@ footer{
 .woocommerce a.button.alt{
     background-color: black;
     text-align: center;
-    transition: 0.2s;
-}
-.woocommerce a.button.alt:hover{
-    background-color: rgb(58, 58, 58);
-    transition: 0.2s;
 }
 .woocommerce a.button.alt:hover{
     background-color: rgb(48, 48, 48);

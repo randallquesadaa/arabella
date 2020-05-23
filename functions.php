@@ -10,10 +10,6 @@ function load_css()
     wp_enqueue_style('style');
 
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
-<<<<<<< HEAD
-
-=======
->>>>>>> Randall
 }
 
 add_action ('wp_enqueue_scripts','load_css');
@@ -56,6 +52,7 @@ function register_navwalker(){
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
 
 function change_woocommerce_field_markup( $field, $key, $args, $value ) {
     //  Remove the .form-row class from the current field wrapper
