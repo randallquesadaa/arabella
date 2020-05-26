@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 <div class="woocommerce-products-header row m-2">
 	<div class="col-12 col-md-3">
-		<div class="row border border-dark mt-1">
+		<div class="row border mt-1">
 			<div class="col m-0">
 				<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 					<h1 class=" woocommerce-products-header__title page-title text-center border-bottom"><?php woocommerce_page_title(); ?></h1>
