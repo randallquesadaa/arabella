@@ -48,7 +48,7 @@
         } 
         $longitud = count($array_id);
         for($i=0; $i<$longitud; $i++){
-        if($link == '/arabella/product-category/'.$array_name[$i].'/'){
+        if($link == '/arabella/categoria-producto/'.$array_name[$i].'/'){
             $args2 = array(
             'taxonomy'     => $taxonomy,
             'child_of'     => 0,
@@ -63,11 +63,9 @@
             $sub_cats = get_categories( $args2 );
             if($sub_cats) {
                 foreach($sub_cats as $sub_category) {
-                    echo '<br /><a id="'.$sub_category->term_id.'" href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a>';
-                }   
+                    echo '<a id="'.$sub_category->term_id.'" href="'. get_term_link($sub_category->slug, 'product_cat') .'">'. $sub_category->name .'</a>';
+                }   //Categoria
             }
         }
-    }
-
-    
+    }  
 ?>
