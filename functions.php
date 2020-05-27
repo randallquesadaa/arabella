@@ -53,6 +53,8 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
+
+
 function change_woocommerce_field_markup( $field, $key, $args, $value ) {
     //  Remove the .form-row class from the current field wrapper
     $field = str_replace('form-row', '', $field);
