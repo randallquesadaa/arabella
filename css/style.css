@@ -103,6 +103,12 @@ footer i:hover {
   margin: 3em 0 3em 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .categories .woocommerce {
+    margin: 2em 0 0em 0;
+  }
+}
+
 .categories .woocommerce ul {
   list-style: none;
   padding: 0;
@@ -150,6 +156,20 @@ footer i:hover {
 
 @media only screen and (max-width: 480px) {
   .categories .woocommerce ul li a h2 {
+    font-size: 1em;
+  }
+}
+
+.woocommerce ul.products li.product {
+  margin: 0px 0.4em 1em 0;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title {
+  font-size: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce ul.products li.product .woocommerce-loop-category__title {
     font-size: 1em;
   }
 }
@@ -247,11 +267,6 @@ footer i:hover {
   display: none !important;
 }
 
-.woocommerce-product-gallery__image {
-  background-color: transparent;
-  float: left;
-}
-
 .add_to_cart {
   background-color: #000;
   color: #fff;
@@ -270,42 +285,166 @@ footer i:hover {
   transition: all 0.5s ease-in-out;
 }
 
+.woocommerce-product-gallery__image {
+  background-color: transparent;
+  float: left;
+}
+
 .woocommerce-product-gallery__image a img {
   margin: 20px 10px;
 }
-.woocommerce-LoopProduct-link img{
+
+@media only screen and (max-width: 480px) {
+  .woocommerce-product-gallery__image a img {
+    margin: 10px 7px;
+  }
+}
+
+.woocommerce-cart-form table img {
+  width: 30%;
+}
+
+.woocommerce-cart-form table #coupon_code {
+  width: auto;
+  text-align: center;
+  border-radius: 5px;
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce-cart-form table #coupon_code {
+    width: 53%;
+    height: 35px;
+    margin-right: 5px;
+  }
+}
+
+.woocommerce-cart-form table .remove {
+  color: black !important;
+}
+
+.woocommerce-cart-form table .remove:hover {
+  background-color: #ebe9eb;
+  border-radius: 5px;
+  color: #515151;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce a.button.alt {
+    display: block;
+  }
+}
+
+.woocommerce a.button.alt {
+  background-color: black;
+  text-align: center;
+}
+
+.woocommerce a.button.alt:hover {
+  background-color: #303030;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 480px) {
+  .woocommerce table.cart td.actions .coupon .input-text + .button {
+    font-size: 14px;
+    width: auto;
+    height: 35px;
+  }
+}
+
+.cart-discount a {
+  float: right;
+}
+
+@media only screen and (max-width: 480px) {
+  .cart-discount a {
+    float: none;
+  }
+}
+
+.form-check select,
+.form-check textarea,
+.form-check input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.woocommerce button.button.alt {
+  background-color: black;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.woocommerce button.button.alt:hover {
+  background-color: #303030;
+  transition: 0.2s;
+}
+
+.woocommerce-LoopProduct-link img {
   width: 100%;
   height: auto;
 }
-.woocommerce-LoopProduct-link .price{
+
+.woocommerce-LoopProduct-link .price {
   position: absolute;
   top: 3%;
   right: 3%;
+  background-color: #1d1d1d;
 }
-.woocommerce-LoopProduct-link h2{
+
+.woocommerce-LoopProduct-link h2 {
   text-align: center;
   color: #000;
 }
-.products div .button{
+
+.products div .button {
   display: block;
   color: #fff;
-  background: #000;
+  background: #1d1d1d;
   padding: 3%;
   margin: 3% auto;
   text-align: center;
 }
-.woocommerce-products-header .product_list a{
-  font-size: 200%;
+
+.woocommerce-products-header .product_list a {
+  font-size: 120%;
   text-decoration: none;
-  border: 1px solid #000;
+  border: 1px solid #cecece;
   color: #000;
   padding: 1%;
   display: block;
   margin-bottom: 5%;
   transition: ease-in-out;
 }
-.woocommerce-products-header .product_list a:hover{
+
+@media only screen and (max-width: 480px) {
+  .woocommerce-products-header .product_list a {
+    margin-bottom: 0;
+  }
+}
+
+.woocommerce-products-header .product_list a:hover {
   background: #000;
   color: #fff;
   transition: ease-in-out;
 }
+
+@media only screen and (max-width: 480px) {
+  .woocommerce-products-header .product_list {
+    padding: 0 0 25px 0;
+  }
+}
+
