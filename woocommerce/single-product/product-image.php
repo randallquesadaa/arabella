@@ -126,8 +126,17 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
             <div class="col-12 align-items-center justify-content-center my-3">
                 <div class="row">
                     <div class="col-12 text-center ">
-                        <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"
-                            class="single_add_to_cart_button button alt add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+                       <div class="woocommerce-variation-add-to-cart variations_button">
+                            <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+
+                            <button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+
+                            <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+
+                            <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+                            <input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+                            <input type="hidden" name="variation_id" class="variation_id" value="0" />
+                        </div>
                     </div>
                 </div>
             </div>
