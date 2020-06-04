@@ -412,11 +412,23 @@ footer i:hover {
 
 .products div .button {
   display: block;
+  text-decoration: none;
   color: #fff;
   background: #1d1d1d;
   padding: 3%;
   margin: 3% auto;
   text-align: center;
+  transition: ease-in-out;
+}
+.products div .button:hover {
+  color: #1d1d1d;
+  background: #fff;
+  border: solid 1px #000;
+  transition: ease-in-out;
+}
+
+.products div a{
+  text-decoration: none;
 }
 
 .woocommerce-products-header .product_list a {

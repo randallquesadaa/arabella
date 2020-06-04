@@ -127,7 +127,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
                 <div class="row">
                     <div class="col-12 text-center ">
                         <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"
-                            class="single_add_to_cart_button button alt add_to_cart text-warning"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+                            class="single_add_to_cart_button button alt add_to_cart"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
                     </div>
                 </div>
             </div>
