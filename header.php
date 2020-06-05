@@ -14,7 +14,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a id="logo" class="navbar-brand" href="#">ARABELLA</a>
+                <a id="logo" class="navbar-brand" href="/arabella">ARABELLA</a>
                 <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'top-menu',
