@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact
+Template Name: Contacto
 */
 ?>
 
@@ -14,7 +14,7 @@ Template Name: Contact
         <?php endif; ?>
         <div class="hero-contact container">
             <div class="row">
-                <h3 class="text-white text-center text-lg-left">About us and how to contact</h3>
+                <h3 class="text-white text-center text-lg-left">Acerca de nosotros y como contactarnos</h3>
             </div>
         </div>
     </div>
