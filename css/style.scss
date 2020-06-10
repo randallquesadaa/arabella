@@ -417,3 +417,53 @@ img{
         }
     }
 }
+
+.thumbnails {
+    display: none;
+  }
+.images{
+    margin-top: 5%;
+    width: 50%;
+}
+.images{
+    width: 100%;
+}
+.button {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: #1d1d1d;
+    padding: 10px;
+    margin: 3% auto;
+    text-align: center;
+    transition: ease-in-out;
+  }
+  .button:hover {
+    color: #1d1d1d;
+    background: #fff;
+    border: solid 1px #000;
+  }
+
+  .woocommerce-Price-amount{
+    font-size: 150%;
+  }
+  
+  label{
+    font-size: 150%;
+  }
+  
+  .value select{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
