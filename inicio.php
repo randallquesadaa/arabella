@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Inicio
+*/
+?>
+
 <?php get_header();?>
 
     <div class="container-fluid p-0">
@@ -10,9 +16,9 @@
                 <?php endif; ?>
                 <div class="hero-container container d-flex justify-content-lg-start align-items-center justify-content-center">
                     <div>
-                        <h3 class="text-white text-center">WHAT'S NEW</h3>
+                        <h3 class="text-white text-center">QUE HAY DE NUEVO</h3>
                         <div class="mt-5 text-center">
-                            <a class="py-lg-3 px-lg-5" href="#newProduct">Discover the selection</a>
+                            <a class="py-lg-3 px-lg-5" href="#newProduct">Descubre la seleccion</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +30,7 @@
         </section>
 
         <section id="newProduct" class="newProduct container">
-            <h1 class=" text-center mt-3 mb-3">New Products</h1>
+            <h1 class=" text-center mt-3 mb-3">Nuevos Productos</h1>
             <?php get_template_part('includes/section','newproducts');?>
         </section>
     </div>
