@@ -297,6 +297,9 @@ footer i:hover {
   margin-top: 5%;
   width: 50%;
 }
+.thumbnails {
+  display: none;
+}
 
 @media only screen and (max-width: 480px) {
   .woocommerce-product-gallery__image a img {
