@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div class="col-12 col-md-5 col-lg-3 border m-lg-1 m-md-1 my-1" <?php wc_product_class( '', $product ); ?>>
+<div class="card-product col-12 col-md-5 col-lg-3 border m-lg-1 m-md-1 my-1" <?php wc_product_class( '', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.

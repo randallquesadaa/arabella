@@ -29,6 +29,12 @@ body {
   margin-bottom: 8em;
 }
 
+@media only screen and (max-width: 480px) {
+  body {
+    margin-bottom: 15em;
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -67,7 +73,7 @@ footer i:hover {
   font-family: "Pala";
   text-align: center;
   position: absolute;
-  top: 41%;
+  top: 42vh;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -410,6 +416,7 @@ footer i:hover {
 }
 
 .woocommerce-LoopProduct-link img {
+  margin-top: 15px;
   width: 100%;
   height: auto;
 }
@@ -417,13 +424,14 @@ footer i:hover {
 .woocommerce-LoopProduct-link .price {
   position: absolute;
   top: 3%;
-  right: 3%;
+  right: 0%;
   background-color: #1d1d1d;
 }
 
 .woocommerce-LoopProduct-link h2 {
   text-align: center;
   color: #000;
+  margin-bottom: 3em;
 }
 
 .products div .button {
@@ -433,6 +441,9 @@ footer i:hover {
   padding: 3%;
   margin: 3% auto;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 92%;
 }
 
 .woocommerce-products-header .product_list a {
@@ -495,7 +506,7 @@ footer i:hover {
 }
 
 .woocommerce-Price-amount {
-  font-size: 150%;
+  font-size: 115%;
 }
 
 label {
@@ -516,5 +527,9 @@ label {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.added_to_cart {
+  display: none;
 }
 

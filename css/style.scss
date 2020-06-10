@@ -25,6 +25,9 @@ html
 body{
     margin: 0;
     margin-bottom: 8em;
+    @include respond-to($phone){
+        margin-bottom: 15em;
+    }
 }
 
 //FOOTER
@@ -64,7 +67,7 @@ footer{
     font-family: "Pala";
     text-align: center;
     position: absolute;
-    top: 41%;
+    top: 42vh;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -370,6 +373,7 @@ footer{
 //----------Tienda----------
 .woocommerce-LoopProduct-link{
 img{
+    margin-top: 15px;
     width: 100%;
     height: auto;
 }
@@ -378,7 +382,7 @@ img{
   .price{
     position: absolute;
     top: 3%;
-    right: 3%;
+    right: 0%;
     background-color: #1d1d1d;
   }
   }
@@ -386,6 +390,7 @@ img{
     h2{
         text-align: center;
         color: #000;
+        margin-bottom: 3em;
     }
 }
   .products{
@@ -397,6 +402,9 @@ img{
             padding: 3%;
             margin: 3% auto;
             text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 92%;
        }
     }
 }
@@ -453,7 +461,7 @@ img{
   }
 
   .woocommerce-Price-amount{
-    font-size: 150%;
+    font-size: 115%;
   }
   
   label{
@@ -474,4 +482,12 @@ img{
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .added_to_cart{
+      display: none;
+  }
+
+  .card-product{
+    
   }
