@@ -533,3 +533,7 @@ label {
   display: none;
 }
 
+.navbar {
+  z-index: 100;
+}
+
