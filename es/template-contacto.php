@@ -20,7 +20,7 @@ Template Name: Contacto
     </div>
 </section>
 
-<section class="container-fluid contact">
+<section class="container contact">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10 col-12 my-5">
             <h2>Contacto</h2>
