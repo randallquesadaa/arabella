@@ -20,14 +20,17 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
-  min-height: 95vh;
+  margin: 0;
+  margin-bottom: 8em;
 }
 
 footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 
