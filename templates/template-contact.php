@@ -23,7 +23,7 @@ Template Name: Contact
 <section class="container-fluid contact">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10 col-12 my-5">
-            <h2>Contacto</h2>
+            <h2>Contact</h2>
 
             <?php get_template_part('includes/section','content');?>
 
