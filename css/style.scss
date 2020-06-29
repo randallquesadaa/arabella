@@ -96,6 +96,9 @@ footer{
         }
     }
 }
+a{
+    text-decoration: none !important;
+}
 
 //CATEGORIES_INDEX
 .categories{
@@ -406,6 +409,23 @@ img{
             bottom: 0;
             width: 92%;
        }
+       .button:hover{
+           color: #000;
+           border: 1px solid #000;
+           background: #fff;
+       }
+    }
+}
+.woocommerce-pagination{
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        margin-top: 5%;
+        li{
+            font-size: 150%;
+            margin-right: 3%;
+        }
     }
 }
   .woocommerce-products-header{
