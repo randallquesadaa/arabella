@@ -8,10 +8,9 @@ Template Name: Contact
 
 <section>
     <div>
-        <?php if ( get_header_image() ) : ?>
-            <div class="hero" id="site-header">
-            <img alt="" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>">            </div>
-        <?php endif; ?>
+        <div class="hero" id="site-header">
+            <img src="<?php echo wp_get_attachment_url(get_theme_mod('lwp-home-callout-imgContact'))?>">
+        </div>
         <div class="hero-contact container">
             <div class="row">
                 <h3 class="text-white text-center text-lg-left">About us and how to contact</h3>

@@ -64,3 +64,33 @@ function change_woocommerce_field_markup( $field, $key, $args, $value ) {
     return $field;
 }
 add_filter( 'woocommerce_form_field', 'change_woocommerce_field_markup', 10, 4 );
+
+function lwp_home_callout($wp_customize){
+    $wp_customize->add_section('lwp-home-callout-section', array(
+        'title'=> 'HOME CALLOUT'
+    ));
+
+    $wp_customize->add_setting('lwp-home-callout-headline', array(
+        'default'=> 'Example Text'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-home-callout-headline-control', array(
+        'label'=>'Headline',
+        'section'=>'lwp-home-callout-section',
+        'settings'=>'lwp-home-callout-headline'
+    )));
+
+    $wp_customize->add_setting('lwp-home-callout-imgContact');
+
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, '
+    lwp-home-callout-imgContact-control', array(
+        'label'=>'Image Contact',
+        'section'=>'lwp-home-callout-section',
+        'settings'=>'lwp-home-callout-imgContact',
+        'width'=>1920,
+        'height'=>800
+    )));
+}
+
+add_action('customize_register', 'lwp_home_callout');
