@@ -20,9 +20,6 @@ function load_js()
     wp_enqueue_script('jquery');
     wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery', false, true);
     wp_enqueue_script('bootstrap');
-    wp_register_script('scroll', get_template_directory_uri() . '/js/smooth-scroll.min.js', 'jquery', false, true);
-    wp_enqueue_script('scroll');
-    
 }
 
 add_action('wp_enqueue_scripts', 'load_js');
@@ -64,3 +61,135 @@ function change_woocommerce_field_markup( $field, $key, $args, $value ) {
     return $field;
 }
 add_filter( 'woocommerce_form_field', 'change_woocommerce_field_markup', 10, 4 );
+
+//Custom Español
+
+function lwp_es_callout($wp_customize){
+    $wp_customize->add_section('lwp-es-callout-section', array(
+        'title'=> 'Español'
+    ));
+
+    $wp_customize->add_setting('lwp-es-home-callout-title', array(
+        'default'=> 'Bienvenido'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-es-home-callout-title-control', array(
+        'label'=>'Titulo de Inicio',
+        'section'=>'lwp-es-callout-section',
+        'settings'=>'lwp-es-home-callout-title'
+    )));
+
+    $wp_customize->add_setting('lwp-es-contact-callout-title', array(
+        'default'=> 'Acerca de nosotros y como contactarnos'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-es-contact-callout-title-control', array(
+        'label'=>'Titulo de Contacto',
+        'section'=>'lwp-es-callout-section',
+        'settings'=>'lwp-es-contact-callout-title'
+    )));
+    
+}
+
+add_action('customize_register', 'lwp_es_callout');
+
+//Custom English
+
+function lwp_en_callout($wp_customize){
+    $wp_customize->add_section('lwp-en-callout-section', array(
+        'title'=> 'English'
+    ));
+
+    $wp_customize->add_setting('lwp-en-home-callout-title', array(
+        'default'=> 'Welcome'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-en-home-callout-title-control', array(
+        'label'=>'Title Home',
+        'section'=>'lwp-en-callout-section',
+        'settings'=>'lwp-en-home-callout-title'
+    )));
+
+    $wp_customize->add_setting('lwp-en-contact-callout-title', array(
+        'default'=> 'About us and how to contact us'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-es-contact-callout-title-control', array(
+        'label'=>'Title Contact',
+        'section'=>'lwp-en-callout-section',
+        'settings'=>'lwp-en-contact-callout-title'
+    )));
+    
+}
+
+add_action('customize_register', 'lwp_en_callout');
+
+//Custom Image
+
+function lwp_img_callout($wp_customize){
+
+    $wp_customize->add_section('lwp-img-callout-section', array(
+        'title'=> 'Img'
+    ));
+
+    $wp_customize->add_setting('lwp-img-callout-imgHome');
+
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, '
+    lwp-img-callout-imgHome-control', array(
+        'label'=>'Img Home',
+        'section'=>'lwp-img-callout-section',
+        'settings'=>'lwp-img-callout-imgHome',
+        'width'=>1920,
+        'height'=>800
+    )));
+
+    $wp_customize->add_setting('lwp-img-callout-imgContact');
+
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, '
+    lwp-img-callout-imgContact-control', array(
+        'label'=>'Img Contact',
+        'section'=>'lwp-img-callout-section',
+        'settings'=>'lwp-img-callout-imgContact',
+        'width'=>1920,
+        'height'=>800
+    )));
+}
+
+add_action('customize_register', 'lwp_img_callout');
+
+//Custom Contact
+
+function lwp_contact_callout($wp_customize){
+    $wp_customize->add_section('lwp-contact-callout-section', array(
+        'title'=> 'Contact'
+    ));
+
+    $wp_customize->add_setting('lwp-en-home-callout-email', array(
+        'default'=> 'example@example.com'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-contact-callout-email-control', array(
+        'label'=>'Email',
+        'section'=>'lwp-contact-callout-section',
+        'settings'=>'lwp-en-home-callout-email'
+    )));
+
+    $wp_customize->add_setting('lwp-en-contact-callout-number', array(
+        'default'=> '88888888'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
+    lwp-contact-callout-number-control', array(
+        'label'=>'Number',
+        'section'=>'lwp-contact-callout-section',
+        'settings'=>'lwp-en-contact-callout-number'
+    )));
+    
+}
+
+add_action('customize_register', 'lwp_contact_callout');
