@@ -118,7 +118,7 @@ function lwp_en_callout($wp_customize){
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, '
-    lwp-es-contact-callout-title-control', array(
+    lwp-en-contact-callout-title-control', array(
         'label'=>'Title Contact',
         'section'=>'lwp-en-callout-section',
         'settings'=>'lwp-en-contact-callout-title'
