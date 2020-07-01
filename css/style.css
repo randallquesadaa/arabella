@@ -86,6 +86,10 @@ footer i:hover {
   }
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .categories {
   background: #e0e0e038;
 }
@@ -408,6 +412,24 @@ footer i:hover {
   position: absolute;
   bottom: 0;
   width: 92%;
+}
+
+.products div .button:hover {
+  color: #000;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.woocommerce-pagination ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  margin-top: 5%;
+}
+
+.woocommerce-pagination ul li {
+  font-size: 150%;
+  margin-right: 3%;
 }
 
 .woocommerce-products-header .product_list a {
