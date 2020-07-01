@@ -1,11 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);html {
+html {
   scroll-behavior: smooth;
   min-height: 100%;
   position: relative;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   margin-bottom: 8em;
 }
@@ -431,6 +430,14 @@ a {
 .woocommerce-pagination ul li {
   font-size: 150%;
   margin-right: 3%;
+}
+
+.woocommerce-pagination ul a {
+  color: #000;
+}
+
+.woocommerce-pagination ul span.current {
+  font-weight: bold;
 }
 
 .woocommerce-products-header .product_list a {

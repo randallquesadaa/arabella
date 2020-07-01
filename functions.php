@@ -10,6 +10,7 @@ function load_css()
     wp_enqueue_style('style');
 
     wp_enqueue_style('fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+    wp_enqueue_style('animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css');
 }
 
 add_action ('wp_enqueue_scripts','load_css');
@@ -129,13 +130,13 @@ function lwp_en_callout($wp_customize){
 add_action('customize_register', 'lwp_en_callout');
 
 //Custom Image
-
 function lwp_img_callout($wp_customize){
 
     $wp_customize->add_section('lwp-img-callout-section', array(
         'title'=> 'Img'
     ));
 
+    // Main Home-Page Image
     $wp_customize->add_setting('lwp-img-callout-imgHome');
 
     $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, '
@@ -143,6 +144,18 @@ function lwp_img_callout($wp_customize){
         'label'=>'Img Home',
         'section'=>'lwp-img-callout-section',
         'settings'=>'lwp-img-callout-imgHome',
+        'width'=>1920,
+        'height'=>800
+    )));
+
+    // 404 Image
+    $wp_customize->add_setting('lwp-img-callout-img404');
+
+    $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, '
+    lwp-img-callout-img404-control', array(
+        'label'=>'Img 404',
+        'section'=>'lwp-img-callout-section',
+        'settings'=>'lwp-img-callout-img404',
         'width'=>1920,
         'height'=>800
     )));
@@ -163,6 +176,7 @@ add_action('customize_register', 'lwp_img_callout');
 
 //Custom Contact
 
+//People can change fields in contact page
 function lwp_contact_callout($wp_customize){
     $wp_customize->add_section('lwp-contact-callout-section', array(
         'title'=> 'Contact'
