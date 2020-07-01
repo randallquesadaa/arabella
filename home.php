@@ -25,7 +25,7 @@ Template Name: Home
             </div>
         </section>
 
-        <section class="categories container-fluid d-flex justify-content-center">
+        <section class="categories container-fluid d-flex justify-content-center bg-white">
                 <?php get_template_part('includes/section','content');?>
         </section>
 

@@ -10,6 +10,7 @@ html
 body{
     margin: 0;
     margin-bottom: 8em;
+    background-color: #f8f9fa;
     @include respond-to($phone){
         margin-bottom: 15em;
     }
@@ -225,7 +226,7 @@ a{
 
 //Fondo de la parte del producto
 .product_section{
-    background-color: #f8f9fa;
+    background-color: white;
     margin-top: 3rem;
 }
 .wp-post-image{

@@ -38,8 +38,8 @@ $wrapper_classes   = apply_filters(
 );
 $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 ?>
-<div class="col-lg-12 d-flex flex-lg-row product_section align-content-center">
-    <div class="row">
+<div class="col-lg-12 d-flex flex-lg-row product_section align-content-center mb-5">
+    <div class="row p-lg-4">
 		<div class="col-12 col-lg-6 d-flex <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 			<figure class="woocommerce-product-gallery__wrapper col-12">
 				<?php
